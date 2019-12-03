@@ -23,3 +23,6 @@ Solder Paste - Back: 	21.65 g
 Solder Paste - Total: 	35.05 g
 ------------------------------------
 ```
+
+## Binary:
+https://github.com/mfussi/kicad-solderpaste-usage/tree/master/release
