@@ -14,13 +14,13 @@ Metal Amount: 			87.75 %
 Stencil Thickness: 		0.12 mm
 Solder Paste Gravity: 	4.15 g/cm3
 ------------------------------------
-Total Number of Pads: 	2733
-Pad Area - Front: 		2693.11 mm2
-Pad Area - Back: 		4348.80 mm2
+Total Number of Pads: 	262
+Pad Area - Front: 		152.89 mm2
+Pad Area - Back: 		356.70 mm2
 ------------------------------------
-Solder Paste - Front: 	13.41 g
-Solder Paste - Back: 	21.65 g
-Solder Paste - Total: 	35.05 g
+Solder Paste - Front: 	0.76 g
+Solder Paste - Back: 	1.78 g
+Solder Paste - Total: 	2.54 g
 ------------------------------------
 ```
 
