@@ -3,24 +3,47 @@ Calculate the amount of solder paste usage based on kicad board files. Additiona
 
 Custom shaped pads are ignored, only rectangle, rounded rectangle, circle and oval pads are used for the calculation.
 
-## Usage:
-``` java -jar solder-paste-usage-1.0.jar -h ```
+## Example:
 
-``` java -jar solder-paste-usage-1.0.jar -f 'path/to/kicad/pcb/file.kicad_pcb' ```
+```bash 
+java -jar solder-paste-usage-1.1.jar -h 
+```
+
+```bash
+java -jar solder-paste-usage-1.1.jar \
+  -f path/to/board.kicad_pcb \
+  -s 0.12 \
+  -m 88 \
+  -a 8.74 \
+  -x 1.0
+```
+
+## Arguments
+
+| Option | Long form | Description | Default |
+|--------|------------|-------------|----------|
+| `-f` | `--file` | Path to the KiCad `.kicad_pcb` board file (**required**) | — |
+| `-s` | `--stencil` | Stencil thickness in millimeters | `0.12 mm` |
+| `-m` | `--metal` | Metal content of the solder paste (can be percent or fraction, e.g. `88` or `0.88`) | `87.75 %` |
+| `-a` | `--alloy-density` | Alloy density in g/cm³ | `8.74 g/cm³` |
+| `-x` | `--flux-density` | Flux density in g/cm³ | `1.00 g/cm³` |
+| `-h` | `--help` | Print help and exit | — |
 
 ## Sample Output:
 ```
-Metal Amount: 			87.75 %
-Stencil Thickness: 		0.12 mm
-Solder Paste Gravity: 	4.15 g/cm3
+Metal Fraction:          87.75 %
+Stencil Thickness:       0.120 mm
+Alloy Density:           8.740 g/cm3
+Flux Density:            1.000 g/cm3
+Paste Density (mix):     4.486 g/cm3
 ------------------------------------
-Total Number of Pads: 	262
-Pad Area - Front: 		152.89 mm2
-Pad Area - Back: 		356.70 mm2
+Total Number of Pads:    2733
+Pad Area - Front:        2693.11 mm2
+Pad Area - Back:         4348.80 mm2
 ------------------------------------
-Solder Paste - Front: 	0.76 g
-Solder Paste - Back: 	1.78 g
-Solder Paste - Total: 	2.54 g
+Solder Paste - Front:    1.45 g
+Solder Paste - Back:     2.34 g
+Solder Paste - Total:    3.79 g
 ------------------------------------
 ```
 
