@@ -88,8 +88,8 @@ object Main {
             val totalVolumeFront = totalAreaFront * stencilThickness                        //mm3
             val totalVolumeBack = totalAreaBack * stencilThickness                          //mm3
 
-            val solderPasteFront = (totalVolumeFront / 100.0f) * solderPasteGravity         //g
-            val solderPasteBack = (totalVolumeBack / 100.0f) * solderPasteGravity           //g
+            val solderPasteFront = (totalVolumeFront / 1000.0) * solderPasteGravity  // g
+            val solderPasteBack  = (totalVolumeBack  / 1000.0) * solderPasteGravity  // g
 
             System.out.println("Metal Amount: \t\t\t${String.format("%.2f", amountOfMetal * 100)} %")
             System.out.println("Stencil Thickness: \t\t${String.format("%.2f", stencilThickness)} mm")
